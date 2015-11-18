@@ -32,7 +32,7 @@ class Gcc5 < Formula
     sha256 "5cc7eaaab1dd29879109ccf896f91c691ba6267a997288ee526e3f21479a8f02" => :mountain_lion
   end
 
-  if MacOS::Xcode.installed? && MacOS::Xcode.version.to_f >= 7
+  if MacOS::Xcode.version >= "7"
     # Fixes build with Xcode 7.
     # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=66523
     patch do
